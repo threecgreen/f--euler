@@ -2,7 +2,7 @@
 // Largest palindrome product
 // Find the largest palindrome made from the product of two 3-digit numbers
 let isPalindrome number =
-    let str = (int >> string) number
+    let str = string number
     let rec impl indexA indexB =
         indexA >= indexB || (str.[indexA] = str.[indexB] && impl (indexA + 1) (indexB - 1))
     impl 0 (str.Length - 1)
