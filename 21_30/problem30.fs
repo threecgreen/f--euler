@@ -12,3 +12,21 @@ The sum of these numbers is 1634 + 8208 + 9474 = 19316.
 
 Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
 *)
+/// Tests whether a number is the sum of its digits to the `power` power.
+let isSumOfDigitsToPower power number =
+    /// Change order of pown function for easier piping
+    let revPown exp baseNum = pown baseNum exp
+    number
+    |> string
+    |> Seq.map ( (fun x -> int x - 48) >> (revPown power ) )
+    // |> Seq.map (pown numberOfDigits)
+    |> Seq.reduce (+)
+    |> (=) number
+
+[<EntryPoint>]
+let main args =
+    [10..10000000]
+    |> List.filter (isSumOfDigitsToPower 5)
+    |> List.reduce (+)
+    |> printfn "The sum of all numbers that are the sum of the fifth powers of their digits is %d"
+    0
