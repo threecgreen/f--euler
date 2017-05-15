@@ -16,7 +16,9 @@ of two abundant numbers is less than this limit.
 
 Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 *)
+/// List of abudant numbers.
 let abundantNumbers =
+    /// Determines whether a number is abundant or not, ie whether the sum of a number's proper divisors is larger than the number.
     let isAbundant number =
         match number with
         | _ when number <= 1 -> false
@@ -25,15 +27,16 @@ let abundantNumbers =
             |> List.filter (fun x -> number % x = 0)
             |> List.reduce (+)
             |> (<) number
-    [1 .. 28123]
-    |> List.filter isAbundant
+    List.filter isAbundant [1 .. 28123]
 
+/// All the sums of pairs of abundant numbers less than 28124.
 let abundantSums =
     List.collect (fun i -> [ for j in abundantNumbers -> (i + j) ] ) abundantNumbers
     |> set
 
+/// Sum of all numbers that cannot be written as the sum of two abundant numbers.
 let notAbundantSumsSum =
-    abundantSums - ( set [1 .. 28123] )
+    Set.difference ( set [1 .. 28123] ) abundantSums
     |> seq
     |> Seq.reduce (+)
 
