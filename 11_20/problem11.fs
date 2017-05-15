@@ -15,15 +15,15 @@ let readFile filename =
     |> Array.map (fun line -> line.Split [|' '|])
     |> Array.map (Array.map int)
 
-let verticalProduct (array: int[][]) x y =
-    array.[y].[x] * array.[y + 1].[x] * array.[y + 2].[x] * array.[y + 3].[x]
+let verticalProduct (grid: int[][]) x y =
+    grid.[y].[x] * grid.[y + 1].[x] * grid.[y + 2].[x] * grid.[y + 3].[x]
 
-let horizontalProduct (array: int[][]) x y =
-    let row = array.[y]
+let horizontalProduct (grid: int[][]) x y =
+    let row = grid.[y]
     row.[x] * row.[x + 1] * row.[x + 2] * row.[x + 3]
 
-let topDownDiagonalProduct (array: int[][]) x y =
-    array.[y].[x] * array.[y + 1].[x + 1] * array.[y + 2].[x + 2] * array.[y + 3].[x + 3]
+let topDownDiagonalProduct (grid: int[][]) x y =
+    grid.[y].[x] * grid.[y + 1].[x + 1] * grid.[y + 2].[x + 2] * grid.[y + 3].[x + 3]
 
 let bottomUpDiagonalProduct (grid: int[][]) x y =
     let l = Array.length grid
