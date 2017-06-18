@@ -1,6 +1,7 @@
-// Problem 18
-// Maximum path sum I
 (*
+Problem 18
+Maximum path sum I
+
 That is, 3 + 7 + 4 + 9 = 23.
 
 Find the maximum total from top to bottom of the triangle below:

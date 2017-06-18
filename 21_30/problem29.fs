@@ -1,6 +1,7 @@
-// Problem 29
-// Distinct powers
 (*
+Problem 29
+Distinct powers
+
 Consider all integer combinations of a**b for 2 ≤ a ≤ 5 and 2 ≤ b ≤ 5:
 
 22 = 4, 23 = 8, 24 = 16, 25 = 32

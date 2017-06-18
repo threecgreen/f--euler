@@ -1,7 +1,6 @@
-// Problem 26
-// Reciprocal cycles
 (*
-A unit fraction contains 1 in the numerator. The decimal representation of the unit fractions with denominators 2 to 10 are given:
+Problem 26
+Reciprocal cycles unit fraction contains 1 in the numerator. The decimal representation of the unit fractions with denominators 2 to 10 are given:
 
 1/2 = 0.5
 1/3 = 0.(3)

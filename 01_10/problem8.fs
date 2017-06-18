@@ -1,6 +1,7 @@
-// Problem 8
-// Largest product in a series
 (*
+Problem 8
+Largest product in a series
+
 Series:
 73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
@@ -22,9 +23,10 @@ Series:
 84580156166097919133875499200524063689912560717606
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450
+
+Find the thirteen adjacent digits in the 1000-digit number that have the
+greatest product. What is the value of this product?
 *)
-// Find the thirteen adjacent digits in the 1000-digit number that have the
-// greatest product. What is the value of this product?
 let strToInts (str: string) =
     // Cast string each element to char then int and use ASCII bindings to convert to numbers
     // Use 64-bit ints because error was overflowing before
