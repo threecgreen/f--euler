@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>fsharp_euler</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="11_20/problem18.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>

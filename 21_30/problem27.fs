@@ -42,6 +42,7 @@ let consecutivePrimeCount (func: int -> int) =
     |> Seq.length
 
 
+
 [<EntryPoint>]
 let main args =
     List.collect (fun a -> [for b in -1000..1000 -> (a, b)]) [-999..999]
